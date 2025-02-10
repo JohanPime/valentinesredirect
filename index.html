@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar a Pantalla de Inicio</title>
+    <script>
+        function addToHomeScreen() {
+            // Redirige a la web original
+            window.location.href = "https://www.figma.com/proto/qP3tdgAVrK3zCT66bqTGkl/Maria%26JohanSanValentin?node-id=2002-87&embed-host=share";
+
+            // Intenta abrir Chrome con la opción de agregar a inicio
+            setTimeout(() => {
+                let a = document.createElement('a');
+                a.href = "https://www.figma.com/proto/qP3tdgAVrK3zCT66bqTGkl/Maria%26JohanSanValentin?node-id=2002-87&embed-host=share";
+                a.rel = "shortcut icon";
+                a.download = "SanValentinApp";
+                document.body.appendChild(a);
+                a.click();
+            }, 2000);
+        }
+    </script>
+</head>
+<body onload="addToHomeScreen()">
+    <h3>Si no se abrió automáticamente, <a href="https://www.figma.com/proto/qP3tdgAVrK3zCT66bqTGkl/Maria%26JohanSanValentin?node-id=2002-87&embed-host=share">haz clic aquí</a></h3>
+</body>
+</html>
